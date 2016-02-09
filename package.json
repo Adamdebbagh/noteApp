@@ -1,5 +1,5 @@
 {
-  "name": "chapter3",
+  "name": "noteApp",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/ionic-in-action/chapter3.git"
   },
-  "author": "Jeremy Wilken",
+  "author": "Adam Debbagh",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ionic-in-action/chapter3/issues"
