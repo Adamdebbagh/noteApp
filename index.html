@@ -49,7 +49,7 @@
             <div class="panel-body"markdown="{{content.content}}"></div>
             <div class="panel-footer">{{content.date | date:'short'}}</div>
           </div>
-          <form name="editor" class="panel panel-default" ng-show="editing">
+          <form name="editor" class="panel panel-default" ng-show="editing" ng-submit="save()">
             <div class="panel-heading">
               <h3 class="panel-title"><input type="text" class="form-control" placeholder="New Note" ng-model="content.title" required /></h3>
             </div>
