@@ -2,7 +2,7 @@ angular.module('noteApp')
 .controller('EditorController', function($scope,$http){
 
     $scope.state = { editing: true };
-    $scope.editing = true;
+
 
     $http.get('/notes')
         .success(function (data) {
@@ -15,5 +15,13 @@ angular.module('noteApp')
     $scope.view = function(index){
         $scope.editing = false;
         $scope.content = $scope.notes[index];
+    };
+
+    $scope.create = function(){
+        $scope.editing = true;
+        $scope.content = {
+            title:'',
+            content:''
+        };
     };
 });
