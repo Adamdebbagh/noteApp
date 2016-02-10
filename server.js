@@ -151,5 +151,5 @@ app.delete('/notes/:id', function (req, res) {
 });
 
 app.listen(3000, function () {
-  console.log('Server started. Open http://localhost:3000 in your browser.');
+  console.log('Hey Adam, Your Slave is ready . Open http://localhost:3000 in your browser.');
 });
