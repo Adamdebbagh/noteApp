@@ -45,7 +45,23 @@ angular.module('noteApp')
     };
 
 
-    $scope.delete = function(){
-
+    $scope.remove = function () {
+        $http.delete('/notes/' + $scope.content.id).success(function (data) {
+            var found = -1;
+            angular.forEach($scope.notes, function (note, index) {
+                if (note.id === $scope.content.id) {
+                    found = index;
+                }
+            });
+            if (found >= 0) {
+                $scope.notes.splice(found, 1);
+            }
+            $scope.content = {
+                title: '',
+                content: ''
+            };
+        }).error(function (err) {
+            $scope.error = 'Could not delete note';
+        });
     };
 });
